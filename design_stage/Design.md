@@ -81,6 +81,12 @@
 
 **Для Гостя**
 
-**Для Продавца**
+![alt text](design/d21.png)
+
+**Для Покупателя**
+
+![alt text](design/d22.png)
 
 **Для Магазина**
+
+![alt text](design/d23.png)
