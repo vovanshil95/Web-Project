@@ -1,14 +1,24 @@
-import React, { useState } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
-import Card from './components/Card.js'
-import Header from './components/Header';
+import { BrowserRouter, Routes ,Route } from 'react-router-dom';
+import {DatePicker, Button} from 'antd';
+import "antd/dist/antd.css";
 
 const StartApp = () =>{
   return(
-    <div>
-      <Header/>
-      <Card itemName="default" itemDescription="dfdlfklskldflsdfsdfsdf"/>
-    </div>
+    <BrowserRouter>
+      <div>
+        <ul>
+          <li>dfdfdf</li>
+          <li>dfdfdf</li>
+          <li>ejrooroitj</li>
+        </ul>
+        <Routes>
+          <Route path='login' element={<DatePicker/>}/>
+          <Route path='register' element={<Button type="primary">fgfgfgfg</Button>}/>
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
