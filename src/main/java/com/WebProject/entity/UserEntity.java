@@ -17,7 +17,7 @@ public class UserEntity {
     private  String password;
 
     @Column(name = "card", nullable = true)
-    private int card;
+    private Integer card;
 
     @Column(name = "address", length = 64, nullable = true )
     private String address;
