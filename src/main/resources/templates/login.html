@@ -45,15 +45,16 @@
     </header>
 
 
-<form class="container-sm border lg-3" style="margin-top: 2rem; max-width: 40vw;" >
+<form class="container-sm border lg-3" style="margin-top: 2rem; max-width: 40vw;" action="/user/check_login", method="post">
     <h2 style="margin: 2rem auto;">Login page</h2>
     <div class="mb-3">
+        <p th:if="${loginError}">incorrect login or password</p>
         <label for="formGroupExampleInput" class="form-label">Login</label>
-        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="user@mail.ru">
+        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="user@mail.ru", name = "email">
       </div>
       <div class="mb-3">
         <label for="formGroupExampleInput2" class="form-label">Password</label>
-        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="********">
+        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="********", name = "password">
       </div>
       <div></div>
       <button type="submit" class="btn btn-primary mb-3">Submit</button>

@@ -1,6 +1,6 @@
 package com.WebProject.service;
 
-import com.WebProject.Exceptions.SameCredentialsException;
+import com.WebProject.Exception.SameCredentialsException;
 import com.WebProject.entity.UserEntity;
 import com.WebProject.repository.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.function.Predicate;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 

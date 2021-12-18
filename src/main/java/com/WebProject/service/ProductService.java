@@ -1,6 +1,7 @@
 package com.WebProject.service;
 
 import com.WebProject.entity.ProductEntity;
+import com.WebProject.model.Product;
 import com.WebProject.repository.ProductRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,4 +20,9 @@ public class ProductService {
         return StreamSupport.stream(productRepo.findAll().
                 spliterator(), false).collect(Collectors.toList());
     }
+
+//    public List<Product> getProductsForTape() {
+//        return StreamSupport.stream(productRepo.findAll().spliterator(), false).;
+//    }
+
 }

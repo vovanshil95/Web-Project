@@ -1,21 +1,25 @@
-package com.WebProject.controllers;
+package com.WebProject.controller;
 
 
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController
+import java.io.File;
+
+@Controller
 @RequestMapping("/test")
 public class TestController {
 
     @GetMapping("/")
-    public ResponseEntity getTest () {
+    public String getTest () {
         try {
-            return ResponseEntity.ok("Сервер Работает");
+            return "index.html";
+            //return ResponseEntity.ok(new File("src/main/resources/templates/index.html").exists());
         } catch (Exception e) {
-            return ResponseEntity.badRequest().body("Произошла ошибка");
+            return "ошибка";
         }
     }
 }
